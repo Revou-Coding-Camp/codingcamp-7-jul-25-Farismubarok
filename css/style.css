@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0f172a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.todo-app {
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 15px;
+  color: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.todo-app h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.todo-app h1 span {
+  color: #93c5fd;
+}
+
+/* Input baris tugas dan deadline */
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.input-row input[type="text"] {
+  flex: 2;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  background: #334155;
+  color: white;
+  min-width: 0;
+}
+
+.deadline-group {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #334155;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.deadline-group label {
+  color: #cbd5e1;
+  font-size: 1.2rem;
+}
+
+.deadline-group input[type="date"] {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+}
+
+/* Tombol baris */
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.button-row button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#add-btn {
+  background-color: #3b82f6;
+}
+
+#add-btn:hover {
+  background-color: #2563eb;
+}
+
+#delete-all {
+  background-color: #ef4444;
+}
+
+#delete-all:hover {
+  background-color: #dc2626;
+}
+
+/* Filter */
+.search-label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
+.filter-date {
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  background: #334155;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Daftar tugas */
+.section-title {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #cbd5e1;
+  font-size: 16px;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 16;
+}
+
+.todo-list li {
+  background: #334155;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-list button {
+  background: #10b981;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: white;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.todo-list button:hover {
+  opacity: 0.8;
+}
+
+.todo-list button.delete-btn {
+  background-color: #ef4444;
+}
+
+/* Status dan countdown */
+.done {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.task-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.status {
+  font-size: 0.85em;
+  margin-top: 4px;
+  padding: 3px 6px;
+  border-radius: 5px;
+  display: inline-block;
+  width: fit-content;
+}
+
+.status.late {
+  background: #f87171;
+  color: white;
+}
+
+.status.today {
+  background: #facc15;
+  color: #1e293b;
+}
+
+.status.ontime {
+  background: #4ade80;
+  color: #1e293b;
+}
+
+.status.done-status {
+  background: #60a5fa;
+  color: white;
+}
+
+.countdown {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: #fbbf24;
+}

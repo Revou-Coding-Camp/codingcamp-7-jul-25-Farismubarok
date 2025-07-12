@@ -1,11 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    
+  <div class="container">
+    <div class="todo-app">
+      <h1>📋 <span>To-Do List</span></h1>
+
+      <form id="todo-form">
+        <div class="input-row">
+          <input
+            type="text"
+            id="todo-input"
+            placeholder="Tulis tugasmu..."
+            required
+          />
+          <div class="deadline-group">
+            <label for="date-input">📅</label>
+            <input type="date" id="date-input" required />
+          </div>
+        </div>
+
+        <div class="button-row">
+          <button type="submit" id="add-btn">➕ Tambah</button>
+          <button type="button" id="delete-all">🗑️ Hapus </button>
+        </div>
+      </form>
+
+      <div class="search-section">
+        <label class="search-label" for="filter-date">🔍 Cari tugas:</label>
+        <input type="date" id="filter-date" class="filter-date" />
+      </div>
+
+      <section>
+        <h3 class="section-title">🕒 Belum Selesai</h3>
+        <ul id="pending-list" class="todo-list"></ul>
+      </section>
+
+      <section>
+        <h3 class="section-title">✅ Sudah Selesai</h3>
+        <ul id="done-list" class="todo-list"></ul>
+      </section>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
